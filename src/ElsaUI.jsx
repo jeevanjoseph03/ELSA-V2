@@ -91,7 +91,7 @@ export default function ElsaUI() {
     setChatHistory(historyForApi);
     try {
       const { choices } = await groq.chat.completions.create({
-        messages: [{ role: "system", content: "You are ELSA, a compassionate AI therapist. Use a warm, empathetic tone. Validate feelings and offer gentle advice. Keep responses concise and use natural pauses to create a calm rhythm. Respond in plain text only." }, ...historyForApi],
+        messages: [{ role: "system", content: "You are ELSA, a compassionate AI therapist. Use a warm, empathetic tone. Validate feelings and offer gentle advice. Keep responses concise and use natural pauses to create a calm rhythm. Respond in plain text only.Also if it is a fresh conversation start by introducing yourseflf at the first time only" }, ...historyForApi],
         model: "llama-3.3-70b-versatile",
       });
       const aiText = choices[0]?.message?.content || "I'm not sure how to respond.";
