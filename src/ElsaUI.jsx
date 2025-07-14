@@ -68,7 +68,8 @@ export default function ElsaUI() {
       setIsSpeaking(true);
       const accessToken = await getAzureAuthToken();
       if (!accessToken) throw new Error("Failed to get Azure token.");
-      const processedText = text.replace(/([.?!])\s*/g, '$1 <break time="500ms"/> ').replace(/([,;])\s*/g, '$1 <break time="250ms"/> ');
+      // Using slightly shorter, more natural pauses without the breath sound.
+      const processedText = text.replace(/([.?!])\s*/g, '$1 <break time="350ms"/> ').replace(/([,;])\s*/g, '$1 <break time="200ms"/> ');
       const ssml = `<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='http://www.w3.org/2001/mstts' xml:lang='en-US'><voice name='en-US-JennyNeural'><mstts:express-as style='empathetic'>${processedText}</mstts:express-as></voice></speak>`;
       const response = await axios({ method: 'POST', url: `https://${AZURE_SPEECH_REGION}.tts.speech.microsoft.com/cognitiveservices/v1`, headers: { 'Authorization': `Bearer ${accessToken}`, 'Content-Type': 'application/ssml+xml', 'X-Microsoft-OutputFormat': 'audio-16khz-128kbitrate-mono-mp3', 'User-Agent': 'ELSA' }, data: ssml, responseType: 'blob' });
       const audioUrl = URL.createObjectURL(response.data);
