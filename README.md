@@ -1,6 +1,65 @@
-# Getting Started with Create React App
+# ELSA V2 - A Compassionate AI Companion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ELSA is a voice-driven web application designed to be a comforting and empathetic companion. Built with React, it leverages the power of large language models via Groq and realistic, emotive text-to-speech from Microsoft Azure to create a natural and supportive conversational experience.
+
+The user interface is crafted as a "Digital Sanctuary," featuring a calming, animated environment with a central "breathing" orb to promote a sense of peace and well-being during interaction.
+
+![ELSA UI Screenshot](public/logo.png) 
+*The central orb responds to listening and speaking states, creating a sense of presence.*
+
+## Core Features
+
+- **Voice-First Interaction:** Speak naturally to ELSA and hear her respond in a human-like voice.
+- **Empathetic AI Persona:** ELSA is powered by a large language model (Llama 3.3) with a system prompt designed to make her a supportive and understanding therapist.
+- **"Digital Sanctuary" UI:** A soothing, animated gradient background and a "breathing" central orb that responds to the conversation state (idle, listening, speaking).
+- **Realistic, Emotive Voice:** Utilizes Azure's neural text-to-speech with custom SSML to add natural pauses and an empathetic tone.
+- **Interruptible Conversation:** You can interrupt ELSA at any time by tapping the orb to speak, creating a more natural conversational flow.
+- **Glassmorphism Chat History:** Review your conversation in a clean, translucent panel that doesn't break the calming aesthetic.
+
+## Tech Stack
+
+- **Frontend:** React, Framer Motion (for animations), Tailwind CSS
+- **AI Language Model:** Groq (running Llama 3.3 70B)
+- **Text-to-Speech (TTS):** Microsoft Azure Cognitive Services
+- **Speech-to-Text (STT):** Browser's native Web Speech API
+
+## Getting Started
+
+Follow these instructions to get a local copy up and running.
+
+### Prerequisites
+
+- Node.js and npm installed on your machine.
+- API keys for Groq and Microsoft Azure.
+
+### Installation & Setup
+
+1.  **Clone the repository:**
+    ```sh
+    git clone <your-repository-url>
+    cd <repository-folder>
+    ```
+
+2.  **Install NPM packages:**
+    ```sh
+    npm install
+    ```
+
+3.  **Create an environment file:**
+    Create a file named `.env` in the root of your project directory. Copy the contents of your existing `.env` file into it. It should look like this:
+
+    ```env
+    # .env
+    REACT_APP_GROQ_API_KEY=your_groq_api_key_here
+    REACT_APP_AZURE_SPEECH_KEY=your_azure_speech_key_here
+    REACT_APP_AZURE_SPEECH_REGION=your_azure_speech_region_here
+    ```
+
+4.  **Run the application:**
+    ```sh
+    npm start
+    ```
+    This will open the app in your browser at `http://localhost:3000`.
 
 ## Available Scripts
 
