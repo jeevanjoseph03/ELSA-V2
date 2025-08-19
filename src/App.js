@@ -1,4 +1,4 @@
-import ElsaUI from "./ElsaUI"; // Ensure this path is correct
+import ElsaUI from "./ElsaUI";
 
 function App() {
   return <ElsaUI />;

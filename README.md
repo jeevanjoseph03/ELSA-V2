@@ -4,8 +4,6 @@ ELSA is a voice-driven web application designed to be a comforting and empatheti
 
 The user interface is crafted as a "Digital Sanctuary," featuring a calming, animated environment with a central "breathing" orb to promote a sense of peace and well-being during interaction.
 
-![ELSA UI Screenshot](public/logo.png) 
-*The central orb responds to listening and speaking states, creating a sense of presence.*
 
 ## Core Features
 
@@ -126,4 +124,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify).
